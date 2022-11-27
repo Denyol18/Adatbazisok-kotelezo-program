@@ -38,6 +38,16 @@ def filmek_insert():
 
 def filmek_get():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
+        input_2.insert(0, lol[1])
+        input_3.insert(0, lol[2])
+        input_4.insert(0, lol[3])
+        input_5.insert(0, lol[4])
+        input_6.insert(0, lol[5])
         if input_1.get() == "":
             MessageBox.showinfo("Info", "Film azonosito kotelezo!")
         else:
@@ -93,6 +103,11 @@ def filmek_update():
 
 def filmek_delete():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
         if input_1.get() == "":
             MessageBox.showinfo("Info", "Film azonosito mezo kotelezo!")
         else:
@@ -156,6 +171,12 @@ def filmmu_update():
 
 def filmmu_delete():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
+        input_2.insert(0, lol[1])
         if input_1.get() == "" or input_2.get() == "":
             MessageBox.showinfo("Info", "Az uj mufaj mezo kivetelevel minden mezo kotelezo!")
         else:
@@ -204,6 +225,11 @@ def forg_insert():
 
 def forg_delete():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
         if input_1.get() == "":
             MessageBox.showinfo("Info", "Forgalmazo azonosito mezo kotelezo!")
         else:
@@ -251,6 +277,15 @@ def forg_update():
 
 def forg_get():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
+        input_2.insert(0, lol[1])
+        input_3.insert(0, lol[2])
+        input_4.insert(0, lol[3])
+        input_5.insert(0, lol[4])
         if input_1.get() == "":
             MessageBox.showinfo("Info", "Forgalmazo azonosito kotelezo!")
         else:
@@ -304,6 +339,11 @@ def gyar_insert():
 
 def gyar_delete():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
         if input_1.get() == "":
             MessageBox.showinfo("Info", "Gyarto azonosito mezo kotelezo!")
         else:
@@ -351,6 +391,15 @@ def gyar_update():
 
 def gyar_get():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
+        input_2.insert(0, lol[1])
+        input_3.insert(0, lol[2])
+        input_4.insert(0, lol[3])
+        input_5.insert(0, lol[4])
         if input_1.get() == "":
             MessageBox.showinfo("Info", "Gyarto azonosito kotelezo!")
         else:
@@ -396,6 +445,12 @@ def gyartas_insert():
 
 def gyartas_delete():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
+        input_2.insert(0, lol[1])
         if input_1.get() == "" or input_2.get() == "":
             MessageBox.showinfo("Info", "Az uj film azonosito mezo kivetelevel minden mezo kotelezo!")
         else:
@@ -464,6 +519,11 @@ def rend_insert():
 
 def rend_delete():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
         if input_1.get() == "":
             MessageBox.showinfo("Info", "Rendezo azonosito mezo kotelezo!")
         else:
@@ -511,6 +571,15 @@ def rend_update():
 
 def rend_get():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
+        input_2.insert(0, lol[1])
+        input_3.insert(0, lol[2])
+        input_4.insert(0, lol[3])
+        input_5.insert(0, lol[4])
         if input_1.get() == "":
             MessageBox.showinfo("Info", "Rendezo azonosito kotelezo!")
         else:
@@ -556,6 +625,12 @@ def rendez_insert():
 
 def rendez_delete():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
+        input_2.insert(0, lol[1])
         if input_1.get() == "" or input_2.get() == "":
             MessageBox.showinfo("Info", "Az uj film azonosito mezo kivetelevel minden mezo kotelezo!")
         else:
@@ -624,6 +699,11 @@ def szin_insert():
 
 def szin_delete():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
         if input_1.get() == "":
             MessageBox.showinfo("Info", "Szinesz azonosito mezo kotelezo!")
         else:
@@ -671,6 +751,15 @@ def szin_update():
 
 def szin_get():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
+        input_2.insert(0, lol[1])
+        input_3.insert(0, lol[2])
+        input_4.insert(0, lol[3])
+        input_5.insert(0, lol[4])
         if input_1.get() == "":
             MessageBox.showinfo("Info", "Szinesz azonosito kotelezo!")
         else:
@@ -716,6 +805,12 @@ def szerep_insert():
 
 def szerep_delete():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
+        input_2.insert(0, lol[1])
         if input_1.get() == "" or input_2.get() == "":
             MessageBox.showinfo("Info", "Az uj film azonosito mezo kivetelevel minden mezo kotelezo!")
         else:
@@ -782,6 +877,11 @@ def user_insert():
 
 def user_delete():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
         if input_1.get() == "":
             MessageBox.showinfo("Info", "Felhasznalonev mezo kotelezo!")
         else:
@@ -829,6 +929,15 @@ def user_update():
 
 def user_get():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
+        input_2.insert(0, lol[1])
+        input_3.insert(0, lol[2])
+        input_4.insert(0, lol[3])
+        input_5.insert(0, lol[4])
         if input_1.get() == "":
             MessageBox.showinfo("Info", "Felhasznalonev kotelezo!")
         else:
@@ -879,6 +988,12 @@ def ertek_insert():
 
 def ertek_delete():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
+        input_2.insert(0, lol[1])
         if input_1.get() == "" or input_2.get() == "":
             MessageBox.showinfo("Info", "Felhasznalonev es film azonosito mezo kotelezo!")
         else:
@@ -927,6 +1042,14 @@ def ertek_update():
 
 def ertek_get():
     try:
+        vmi = ""
+        for i in lista.curselection():
+            vmi = lista.get(i)
+        lol = vmi.split("    ")
+        input_1.insert(0, lol[0])
+        input_2.insert(0, lol[1])
+        input_3.insert(0, lol[2])
+        input_4.insert(0, lol[3])
         if input_1.get() == "" or input_2.get() == "":
             MessageBox.showinfo("Info", "Felhasznalonev es film azonosito kotelezo!")
         else:
