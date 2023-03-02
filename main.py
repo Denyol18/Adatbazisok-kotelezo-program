@@ -1,8 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox as MessageBox
-from tkinter import *
 import mysql.connector as mysql
-import re as reg
+import re
 
 
 # Filmek tábla műveletei:
@@ -15,7 +14,7 @@ def filmek_insert():
                 or input_5.get() == "" or input_6.get() == "":
             MessageBox.showinfo("Info", "A film azonosito mezo kivetelevel minden mezo kotelezo!")
         elif int(input_5.get()) < 1 or int(input_5.get()) > 10 or input_3.get().isnumeric() is False \
-                or reg.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_4.get()) == []:
+                or re.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_4.get()) == []:
             MessageBox.showinfo("Info", "Nem megfelelo input(ok)!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -78,7 +77,7 @@ def filmek_update():
                 or input_5.get() == "" or input_6.get() == "":
             MessageBox.showinfo("Info", "Minden mezo kotelezo!")
         elif int(input_5.get()) < 1 or int(input_5.get()) > 10 or input_3.get().isnumeric() is False \
-                or reg.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_4.get()) == []:
+                or re.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_4.get()) == []:
             MessageBox.showinfo("Info", "Nem megfelelo input(ok)!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -203,7 +202,7 @@ def forg_insert():
         elif input_2.get() == "" or input_3.get() == "" or input_4.get() == "" \
                 or input_5.get() == "":
             MessageBox.showinfo("Info", "A forgalmazo azonosito mezo kivetelevel minden mezo kotelezo!")
-        elif not reg.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_3.get()):
+        elif not re.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_3.get()):
             MessageBox.showinfo("Info", "Nem megfelelo datum formatum!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -254,7 +253,7 @@ def forg_update():
         if input_1.get() == "" or input_2.get() == "" or input_3.get() == "" or input_4.get() == "" \
                 or input_5.get() == "":
             MessageBox.showinfo("Info", "Minden mezo kotelezo!")
-        elif not reg.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_3.get()):
+        elif not re.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_3.get()):
             MessageBox.showinfo("Info", "Nem megfelelo datum formatum!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -317,7 +316,7 @@ def gyar_insert():
         elif input_2.get() == "" or input_3.get() == "" or input_4.get() == "" \
                 or input_5.get() == "":
             MessageBox.showinfo("Info", "A gyarto azonosito mezo kivetelevel minden mezo kotelezo!")
-        elif not reg.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_3.get()):
+        elif not re.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_3.get()):
             MessageBox.showinfo("Info", "Nem megfelelo datum formatum!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -368,7 +367,7 @@ def gyar_update():
         if input_1.get() == "" or input_2.get() == "" or input_3.get() == "" or input_4.get() == "" \
                 or input_5.get() == "":
             MessageBox.showinfo("Info", "Minden mezo kotelezo!")
-        elif not reg.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_3.get()):
+        elif not re.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_3.get()):
             MessageBox.showinfo("Info", "Nem megfelelo datum formatum!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -497,7 +496,7 @@ def rend_insert():
         elif input_2.get() == "" or input_3.get() == "" or input_4.get() == "" \
                 or input_5.get() == "":
             MessageBox.showinfo("Info", "A rendezo azonosito mezo kivetelevel minden mezo kotelezo!")
-        elif not reg.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_4.get()):
+        elif not re.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_4.get()):
             MessageBox.showinfo("Info", "Nem megfelelo datum formatum!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -548,7 +547,7 @@ def rend_update():
         if input_1.get() == "" or input_2.get() == "" or input_3.get() == "" or input_4.get() == "" \
                 or input_5.get() == "":
             MessageBox.showinfo("Info", "Minden mezo kotelezo!")
-        elif not reg.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_4.get()):
+        elif not re.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_4.get()):
             MessageBox.showinfo("Info", "Nem megfelelo datum formatum!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -677,7 +676,7 @@ def szin_insert():
         elif input_2.get() == "" or input_3.get() == "" or input_4.get() == "" \
                 or input_5.get() == "":
             MessageBox.showinfo("Info", "A szinesz azonosito mezo kivetelevel minden mezo kotelezo!")
-        elif not reg.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_4.get()):
+        elif not re.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_4.get()):
             MessageBox.showinfo("Info", "Nem megfelelo datum formatum!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -728,7 +727,7 @@ def szin_update():
         if input_1.get() == "" or input_2.get() == "" or input_3.get() == "" or input_4.get() == "" \
                 or input_5.get() == "":
             MessageBox.showinfo("Info", "Minden mezo kotelezo!")
-        elif not reg.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_4.get()):
+        elif not re.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_4.get()):
             MessageBox.showinfo("Info", "Nem megfelelo datum formatum!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -855,7 +854,7 @@ def user_insert():
         if input_1.get() == "" or input_2.get() == "" or input_3.get() == "" or input_4.get() == "" \
                 or input_5.get() == "":
             MessageBox.showinfo("Info", "Minden mezo kotelezo!")
-        elif not reg.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_3.get()):
+        elif not re.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_3.get()):
             MessageBox.showinfo("Info", "Nem megfelelo datum formatum!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -906,7 +905,7 @@ def user_update():
         if input_1.get() == "" or input_2.get() == "" or input_3.get() == "" or input_4.get() == "" \
                 or input_5.get() == "":
             MessageBox.showinfo("Info", "Minden mezo kotelezo!")
-        elif not reg.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_3.get()):
+        elif not re.findall("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]", input_3.get()):
             MessageBox.showinfo("Info", "Nem megfelelo datum formatum!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -1538,12 +1537,12 @@ if __name__ == '__main__':
         root.title("Kotelezo program, imdb")
 
         # Label-ök
-        var1 = StringVar()
-        var2 = StringVar()
-        var3 = StringVar()
-        var4 = StringVar()
-        var5 = StringVar()
-        var6 = StringVar()
+        var1 = tk.StringVar()
+        var2 = tk.StringVar()
+        var3 = tk.StringVar()
+        var4 = tk.StringVar()
+        var5 = tk.StringVar()
+        var6 = tk.StringVar()
 
         label1 = tk.Label(root, textvariable=var1, font=('bold', 10))
         label1.place(x=20, y=30)
