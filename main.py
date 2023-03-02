@@ -5,7 +5,7 @@ import mysql.connector as mysql
 import re as reg
 
 
-# FILMEK TABLA MUVELETEI:
+# Filmek tábla műveletei:
 
 def filmek_insert():
     try:
@@ -31,7 +31,7 @@ def filmek_insert():
             input_6.delete(0, 'end')
             MessageBox.showinfo("Info", "Beszuras megtortent!")
             con.close()
-            change1()
+            filmek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -67,7 +67,7 @@ def filmek_get():
                 input_5.insert(0, row[4])
                 input_6.insert(0, row[5])
             con.close()
-            change1()
+            filmek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -96,7 +96,7 @@ def filmek_update():
             input_6.delete(0, 'end')
             MessageBox.showinfo("Info", "Frissites megtortent!")
             con.close()
-            change1()
+            filmek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -123,12 +123,12 @@ def filmek_delete():
             input_6.delete(0, 'end')
             MessageBox.showinfo("Info", "Torles megtortent!")
             con.close()
-            change1()
+            filmek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-# FILMEK_MUFAJAI TABLA MUVELETEI:
+# Filmek műfajai tábla műveletei:
 
 def filmmu_insert():
     try:
@@ -144,7 +144,7 @@ def filmmu_insert():
             input_3.delete(0, 'end')
             MessageBox.showinfo("Info", "Beszuras megtortent!")
             con.close()
-            change2()
+            filmek_mufajai_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -164,7 +164,7 @@ def filmmu_update():
             input_3.delete(0, 'end')
             MessageBox.showinfo("Info", "Frissites megtortent!")
             con.close()
-            change2()
+            filmek_mufajai_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -189,12 +189,12 @@ def filmmu_delete():
             input_3.delete(0, 'end')
             MessageBox.showinfo("Info", "Torles megtortent!")
             con.close()
-            change2()
+            filmek_mufajai_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-# FORGALMAZOK TABLA MUVELETEI:
+# Forgalmazók tábla műveletei:
 
 def forg_insert():
     try:
@@ -218,7 +218,7 @@ def forg_insert():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Beszuras megtortent!")
             con.close()
-            change3()
+            forgalmazok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -244,7 +244,7 @@ def forg_delete():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Torles megtortent!")
             con.close()
-            change3()
+            forgalmazok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -270,7 +270,7 @@ def forg_update():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Frissites megtortent!")
             con.close()
-            change3()
+            forgalmazok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -303,12 +303,12 @@ def forg_get():
                 input_4.insert(0, row[3])
                 input_5.insert(0, row[4])
             con.close()
-            change3()
+            forgalmazok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-# GYARTOK TABLA MUVELETEI:
+# Gyártók tábla műveletei:
 
 def gyar_insert():
     try:
@@ -332,7 +332,7 @@ def gyar_insert():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Beszuras megtortent!")
             con.close()
-            change4()
+            gyartok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -358,7 +358,7 @@ def gyar_delete():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Torles megtortent!")
             con.close()
-            change4()
+            gyartok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -384,7 +384,7 @@ def gyar_update():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Frissites megtortent!")
             con.close()
-            change4()
+            gyartok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -417,12 +417,12 @@ def gyar_get():
                 input_4.insert(0, row[3])
                 input_5.insert(0, row[4])
             con.close()
-            change4()
+            gyartok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-# GYARTASOK TABLA MUVELETEI:
+# Gyártások tábla műveletei:
 
 def gyartas_insert():
     try:
@@ -438,7 +438,7 @@ def gyartas_insert():
             input_3.delete(0, 'end')
             MessageBox.showinfo("Info", "Beszuras megtortent!")
             con.close()
-            change5()
+            gyartasok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -463,7 +463,7 @@ def gyartas_delete():
             input_3.delete(0, 'end')
             MessageBox.showinfo("Info", "Torles megtortent!")
             con.close()
-            change5()
+            gyartasok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -483,12 +483,12 @@ def gyartas_update():
             input_3.delete(0, 'end')
             MessageBox.showinfo("Info", "Frissites megtortent!")
             con.close()
-            change5()
+            gyartasok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-# RENDEZOK TABLA MUVELETEI:
+# Rendezők tábla műveletei:
 
 def rend_insert():
     try:
@@ -512,7 +512,7 @@ def rend_insert():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Beszuras megtortent!")
             con.close()
-            change6()
+            rendezok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -538,7 +538,7 @@ def rend_delete():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Torles megtortent!")
             con.close()
-            change6()
+            rendezok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -564,7 +564,7 @@ def rend_update():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Frissites megtortent!")
             con.close()
-            change6()
+            rendezok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -597,12 +597,12 @@ def rend_get():
                 input_4.insert(0, row[3])
                 input_5.insert(0, row[4])
             con.close()
-            change6()
+            rendezok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-# RENDEZESEK TABLA MUVELETEI:
+# Rendezések tábla műveletei:
 
 def rendez_insert():
     try:
@@ -618,7 +618,7 @@ def rendez_insert():
             input_3.delete(0, 'end')
             MessageBox.showinfo("Info", "Beszuras megtortent!")
             con.close()
-            change7()
+            rendezesek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -643,7 +643,7 @@ def rendez_delete():
             input_3.delete(0, 'end')
             MessageBox.showinfo("Info", "Torles megtortent!")
             con.close()
-            change7()
+            rendezesek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -663,12 +663,12 @@ def rendez_update():
             input_3.delete(0, 'end')
             MessageBox.showinfo("Info", "Frissites megtortent!")
             con.close()
-            change7()
+            rendezesek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-# SZINESZEK TABLA MUVELETEI:
+# Színészek tábla műveletei:
 
 def szin_insert():
     try:
@@ -692,7 +692,7 @@ def szin_insert():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Beszuras megtortent!")
             con.close()
-            change8()
+            szineszek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -718,7 +718,7 @@ def szin_delete():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Torles megtortent!")
             con.close()
-            change8()
+            szineszek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -744,7 +744,7 @@ def szin_update():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Frissites megtortent!")
             con.close()
-            change8()
+            szineszek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -777,12 +777,12 @@ def szin_get():
                 input_4.insert(0, row[3])
                 input_5.insert(0, row[4])
             con.close()
-            change8()
+            szineszek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-# SZEREPLESEK TABLA MUVELETEI:
+# Szereplések tábla műveletei:
 
 def szerep_insert():
     try:
@@ -798,7 +798,7 @@ def szerep_insert():
             input_3.delete(0, 'end')
             MessageBox.showinfo("Info", "Beszuras megtortent!")
             con.close()
-            change9()
+            szereplesek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -823,7 +823,7 @@ def szerep_delete():
             input_3.delete(0, 'end')
             MessageBox.showinfo("Info", "Torles megtortent!")
             con.close()
-            change9()
+            szereplesek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -843,12 +843,12 @@ def szerep_update():
             input_3.delete(0, 'end')
             MessageBox.showinfo("Info", "Frissites megtortent!")
             con.close()
-            change9()
+            szereplesek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-# FELHASZNALOK TABLA MUVELTEI:
+# Felhasználók tábla műveletei:
 
 def user_insert():
     try:
@@ -870,7 +870,7 @@ def user_insert():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Beszuras megtortent!")
             con.close()
-            change10()
+            felhasznalok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -896,7 +896,7 @@ def user_delete():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Torles megtortent!")
             con.close()
-            change10()
+            felhasznalok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -922,7 +922,7 @@ def user_update():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Frissites megtortent!")
             con.close()
-            change10()
+            felhasznalok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -955,12 +955,12 @@ def user_get():
                 input_4.insert(0, row[3])
                 input_5.insert(0, row[4])
             con.close()
-            change10()
+            felhasznalok_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-# ERTEKELESEK TABLA MUVELETEI:
+# Értékelések tábla műveletei:
 
 def ertek_insert():
     try:
@@ -981,7 +981,7 @@ def ertek_insert():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Beszuras megtortent!")
             con.close()
-            change11()
+            ertekelesek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -1009,7 +1009,7 @@ def ertek_delete():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Torles megtortent!")
             con.close()
-            change11()
+            ertekelesek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -1035,7 +1035,7 @@ def ertek_update():
             input_5.delete(0, 'end')
             MessageBox.showinfo("Info", "Frissites megtortent!")
             con.close()
-            change11()
+            ertekelesek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
@@ -1065,14 +1065,14 @@ def ertek_get():
                 input_4.insert(0, row[3])
             input_5.insert(0, input_2.get())
             con.close()
-            change11()
+            ertekelesek_change()
     except Exception:
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
 # Listbox, label, entry es gomb modosito fuggvenyek:
 
-def change1():
+def filmek_change():
     try:
         con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
         cursor = con.cursor()
@@ -1103,7 +1103,7 @@ def change1():
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-def change2():
+def filmek_mufajai_change():
     try:
         con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
         cursor = con.cursor()
@@ -1133,7 +1133,7 @@ def change2():
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-def change3():
+def forgalmazok_change():
     try:
         con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
         cursor = con.cursor()
@@ -1164,7 +1164,7 @@ def change3():
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-def change4():
+def gyartok_change():
     try:
         con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
         cursor = con.cursor()
@@ -1195,7 +1195,7 @@ def change4():
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-def change5():
+def gyartasok_change():
     try:
         con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
         cursor = con.cursor()
@@ -1225,7 +1225,7 @@ def change5():
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-def change6():
+def rendezok_change():
     try:
         con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
         cursor = con.cursor()
@@ -1256,7 +1256,7 @@ def change6():
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-def change7():
+def rendezesek_change():
     try:
         con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
         cursor = con.cursor()
@@ -1286,7 +1286,7 @@ def change7():
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-def change8():
+def szineszek_change():
     try:
         con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
         cursor = con.cursor()
@@ -1317,7 +1317,7 @@ def change8():
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-def change9():
+def szereplesek_change():
     try:
         con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
         cursor = con.cursor()
@@ -1347,7 +1347,7 @@ def change9():
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-def change10():
+def felhasznalok_change():
     try:
         con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
         cursor = con.cursor()
@@ -1378,7 +1378,7 @@ def change10():
         MessageBox.showinfo("Info", "Hiba tortent!")
 
 
-def change11():
+def ertekelesek_change():
     try:
         con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
         cursor = con.cursor()
@@ -1588,17 +1588,17 @@ if __name__ == '__main__':
         get_button = tk.Button(root, text="Leker", font=('italic', 10), bg='white')
         update_button = tk.Button(root, text="Frissit", font=('italic', 10), bg='white')
 
-        filmek_tabla = tk.Button(root, text="Filmek", font=('italic', 10), bg='white', command=change1)
-        film_mufaj_tabla = tk.Button(root, text="Filmek mufajai", font=('italic', 10), bg='white', command=change2)
-        forgalmazok_tabla = tk.Button(root, text="Forgalmazok", font=('italic', 10), bg='white', command=change3)
-        gyartok_tabla = tk.Button(root, text="Gyartok", font=('italic', 10), bg='white', command=change4)
-        gyartasok_tabla = tk.Button(root, text="Gyartasok", font=('italic', 10), bg='white', command=change5)
-        rendezok_tabla = tk.Button(root, text="Rendezok", font=('italic', 10), bg='white', command=change6)
-        rendezesek_tabla = tk.Button(root, text="Rendezesek", font=('italic', 10), bg='white', command=change7)
-        szineszek_tabla = tk.Button(root, text="Szineszek", font=('italic', 10), bg='white', command=change8)
-        szereplesek_tabla = tk.Button(root, text="Szereplesek", font=('italic', 10), bg='white', command=change9)
-        felhasznalok_tabla = tk.Button(root, text="Felhasznalok", font=('italic', 10), bg='white', command=change10)
-        ertekelesek_tabla = tk.Button(root, text="Ertekelesek", font=('italic', 10), bg='white', command=change11)
+        filmek_tabla = tk.Button(root, text="Filmek", font=('italic', 10), bg='white', command=filmek_change)
+        film_mufaj_tabla = tk.Button(root, text="Filmek mufajai", font=('italic', 10), bg='white', command=filmek_mufajai_change)
+        forgalmazok_tabla = tk.Button(root, text="Forgalmazok", font=('italic', 10), bg='white', command=forgalmazok_change)
+        gyartok_tabla = tk.Button(root, text="Gyartok", font=('italic', 10), bg='white', command=gyartok_change)
+        gyartasok_tabla = tk.Button(root, text="Gyartasok", font=('italic', 10), bg='white', command=gyartasok_change)
+        rendezok_tabla = tk.Button(root, text="Rendezok", font=('italic', 10), bg='white', command=rendezok_change)
+        rendezesek_tabla = tk.Button(root, text="Rendezesek", font=('italic', 10), bg='white', command=rendezesek_change)
+        szineszek_tabla = tk.Button(root, text="Szineszek", font=('italic', 10), bg='white', command=szineszek_change)
+        szereplesek_tabla = tk.Button(root, text="Szereplesek", font=('italic', 10), bg='white', command=szereplesek_change)
+        felhasznalok_tabla = tk.Button(root, text="Felhasznalok", font=('italic', 10), bg='white', command=felhasznalok_change)
+        ertekelesek_tabla = tk.Button(root, text="Ertekelesek", font=('italic', 10), bg='white', command=ertekelesek_change)
 
         elso_leker = tk.Button(root, text="Elso lekerdezes", font=('italic', 10), bg='white', command=leker1)
         masodik_leker = tk.Button(root, text="Masodik lekerdezes", font=('italic', 10), bg='white', command=leker2)
@@ -1636,7 +1636,7 @@ if __name__ == '__main__':
         scrollbar.config(command=lista.yview)
         scrollbar1.config(command=lista.xview)
         lista.place(x=390, y=30, width=700, height=600)
-        change1()
+        filmek_change()
 
         # Start
         root.mainloop()
