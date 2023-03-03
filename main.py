@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import messagebox as MessageBox
-from tkinter import ttk
 import mysql.connector as mysql
 import re
 
@@ -38,17 +37,18 @@ def filmek_insert():
 
 def filmek_get():
     try:
-        vmi = ""
-        for i in lista.curselection():
-            vmi = lista.get(i)
-        lol = vmi.split("    ")
-        input_1.insert(0, lol[0])
-        input_2.insert(0, lol[1])
-        input_3.insert(0, lol[2])
-        input_4.insert(0, lol[3])
-        input_5.insert(0, lol[4])
-        input_6.insert(0, lol[5])
-        if input_1.get() == "":
+        if lista.curselection() != ():
+            vmi = ""
+            for i in lista.curselection():
+                vmi = lista.get(i)
+            lol = vmi.split("    ")
+            input_1.insert(0, lol[0])
+            input_2.insert(0, lol[1])
+            input_3.insert(0, lol[2])
+            input_4.insert(0, lol[3])
+            input_5.insert(0, lol[4])
+            input_6.insert(0, lol[5])
+        elif input_1.get() == "":
             MessageBox.showinfo("Info", "Film azonosito kotelezo!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -277,16 +277,17 @@ def forg_update():
 
 def forg_get():
     try:
-        vmi = ""
-        for i in lista.curselection():
-            vmi = lista.get(i)
-        lol = vmi.split("    ")
-        input_1.insert(0, lol[0])
-        input_2.insert(0, lol[1])
-        input_3.insert(0, lol[2])
-        input_4.insert(0, lol[3])
-        input_5.insert(0, lol[4])
-        if input_1.get() == "":
+        if lista.curselection() != ():
+            vmi = ""
+            for i in lista.curselection():
+                vmi = lista.get(i)
+            lol = vmi.split("    ")
+            input_1.insert(0, lol[0])
+            input_2.insert(0, lol[1])
+            input_3.insert(0, lol[2])
+            input_4.insert(0, lol[3])
+            input_5.insert(0, lol[4])
+        elif input_1.get() == "":
             MessageBox.showinfo("Info", "Forgalmazo azonosito kotelezo!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -391,16 +392,17 @@ def gyar_update():
 
 def gyar_get():
     try:
-        vmi = ""
-        for i in lista.curselection():
-            vmi = lista.get(i)
-        lol = vmi.split("    ")
-        input_1.insert(0, lol[0])
-        input_2.insert(0, lol[1])
-        input_3.insert(0, lol[2])
-        input_4.insert(0, lol[3])
-        input_5.insert(0, lol[4])
-        if input_1.get() == "":
+        if lista.curselection() != ():
+            vmi = ""
+            for i in lista.curselection():
+                vmi = lista.get(i)
+            lol = vmi.split("    ")
+            input_1.insert(0, lol[0])
+            input_2.insert(0, lol[1])
+            input_3.insert(0, lol[2])
+            input_4.insert(0, lol[3])
+            input_5.insert(0, lol[4])
+        elif input_1.get() == "":
             MessageBox.showinfo("Info", "Gyarto azonosito kotelezo!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -571,16 +573,17 @@ def rend_update():
 
 def rend_get():
     try:
-        vmi = ""
-        for i in lista.curselection():
-            vmi = lista.get(i)
-        lol = vmi.split("    ")
-        input_1.insert(0, lol[0])
-        input_2.insert(0, lol[1])
-        input_3.insert(0, lol[2])
-        input_4.insert(0, lol[3])
-        input_5.insert(0, lol[4])
-        if input_1.get() == "":
+        if lista.curselection() != ():
+            vmi = ""
+            for i in lista.curselection():
+                vmi = lista.get(i)
+            lol = vmi.split("    ")
+            input_1.insert(0, lol[0])
+            input_2.insert(0, lol[1])
+            input_3.insert(0, lol[2])
+            input_4.insert(0, lol[3])
+            input_5.insert(0, lol[4])
+        elif input_1.get() == "":
             MessageBox.showinfo("Info", "Rendezo azonosito kotelezo!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -751,16 +754,17 @@ def szin_update():
 
 def szin_get():
     try:
-        vmi = ""
-        for i in lista.curselection():
-            vmi = lista.get(i)
-        lol = vmi.split("    ")
-        input_1.insert(0, lol[0])
-        input_2.insert(0, lol[1])
-        input_3.insert(0, lol[2])
-        input_4.insert(0, lol[3])
-        input_5.insert(0, lol[4])
-        if input_1.get() == "":
+        if lista.curselection() != ():
+            vmi = ""
+            for i in lista.curselection():
+                vmi = lista.get(i)
+            lol = vmi.split("    ")
+            input_1.insert(0, lol[0])
+            input_2.insert(0, lol[1])
+            input_3.insert(0, lol[2])
+            input_4.insert(0, lol[3])
+            input_5.insert(0, lol[4])
+        elif input_1.get() == "":
             MessageBox.showinfo("Info", "Szinesz azonosito kotelezo!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -929,16 +933,17 @@ def user_update():
 
 def user_get():
     try:
-        vmi = ""
-        for i in lista.curselection():
-            vmi = lista.get(i)
-        lol = vmi.split("    ")
-        input_1.insert(0, lol[0])
-        input_2.insert(0, lol[1])
-        input_3.insert(0, lol[2])
-        input_4.insert(0, lol[3])
-        input_5.insert(0, lol[4])
-        if input_1.get() == "":
+        if lista.curselection() != ():
+            vmi = ""
+            for i in lista.curselection():
+                vmi = lista.get(i)
+            lol = vmi.split("    ")
+            input_1.insert(0, lol[0])
+            input_2.insert(0, lol[1])
+            input_3.insert(0, lol[2])
+            input_4.insert(0, lol[3])
+            input_5.insert(0, lol[4])
+        elif input_1.get() == "":
             MessageBox.showinfo("Info", "Felhasznalonev kotelezo!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -1042,15 +1047,16 @@ def ertek_update():
 
 def ertek_get():
     try:
-        vmi = ""
-        for i in lista.curselection():
-            vmi = lista.get(i)
-        lol = vmi.split("    ")
-        input_1.insert(0, lol[0])
-        input_2.insert(0, lol[1])
-        input_3.insert(0, lol[2])
-        input_4.insert(0, lol[3])
-        if input_1.get() == "" or input_2.get() == "":
+        if lista.curselection() != ():
+            vmi = ""
+            for i in lista.curselection():
+                vmi = lista.get(i)
+            lol = vmi.split("    ")
+            input_1.insert(0, lol[0])
+            input_2.insert(0, lol[1])
+            input_3.insert(0, lol[2])
+            input_4.insert(0, lol[3])
+        elif input_1.get() == "" or input_2.get() == "":
             MessageBox.showinfo("Info", "Felhasznalonev es film azonosito kotelezo!")
         else:
             con = mysql.connect(host=dbhost, user=dbuser, password=dbpass, database=dbname)
@@ -1535,6 +1541,7 @@ if __name__ == '__main__':
         # Ablak
         root = tk.Tk()
         root.geometry("1200x800")
+        root.configure(bg="#DF3C5F")
         root.title("Kotelezo program, imdb")
 
         # Label-ök
@@ -1545,64 +1552,88 @@ if __name__ == '__main__':
         var5 = tk.StringVar()
         var6 = tk.StringVar()
 
-        label1 = tk.Label(root, textvariable=var1, font=('bold', 10))
+        label1 = tk.Label(root, textvariable=var1, font=('bold', 10), bg="#6F9BD1")
         label1.place(x=20, y=30)
 
-        label2 = tk.Label(root, textvariable=var2, font=('bold', 10))
+        label2 = tk.Label(root, textvariable=var2, font=('bold', 10), bg="#6F9BD1")
         label2.place(x=20, y=60)
 
-        label3 = tk.Label(root, textvariable=var3, font=('bold', 10))
+        label3 = tk.Label(root, textvariable=var3, font=('bold', 10), bg="#6F9BD1")
         label3.place(x=20, y=90)
 
-        label4 = tk.Label(root, textvariable=var4, font=('bold', 10))
+        label4 = tk.Label(root, textvariable=var4, font=('bold', 10), bg="#6F9BD1")
         label4.place(x=20, y=120)
 
-        label5 = tk.Label(root, textvariable=var5, font=('bold', 10))
+        label5 = tk.Label(root, textvariable=var5, font=('bold', 10), bg="#6F9BD1")
         label5.place(x=20, y=150)
 
-        label6 = tk.Label(root, textvariable=var6, font=('bold', 10))
+        label6 = tk.Label(root, textvariable=var6, font=('bold', 10), bg="#6F9BD1")
         label6.place(x=20, y=180)
 
         # input mezők:
         input_1 = tk.Entry()
         input_1.place(x=170, y=30)
+        input_1.configure(bg="#6F9BD1")
 
         input_2 = tk.Entry()
         input_2.place(x=170, y=60)
+        input_2.configure(bg="#6F9BD1")
 
         input_3 = tk.Entry()
         input_3.place(x=170, y=90)
+        input_3.configure(bg="#6F9BD1")
 
         input_4 = tk.Entry()
         input_4.place(x=170, y=120)
+        input_4.configure(bg="#6F9BD1")
 
         input_5 = tk.Entry()
         input_5.place(x=170, y=150)
+        input_5.configure(bg="#6F9BD1")
 
         input_6 = tk.Entry()
         input_6.place(x=170, y=180)
+        input_6.configure(bg="#6F9BD1")
 
         # gombok:
-        insert_button = tk.Button(root, text="Beszur", font=('italic', 10), bg='white')
-        delete_button = tk.Button(root, text="Torol", font=('italic', 10), bg='white')
-        get_button = tk.Button(root, text="Leker", font=('italic', 10), bg='white')
-        update_button = tk.Button(root, text="Frissit", font=('italic', 10), bg='white')
+        insert_button = tk.Button(root, text="Beszur", font=('italic', 10), bg='#224193', fg="white",
+                                  activeforeground="#D2601A", activebackground="#1D3C45")
+        delete_button = tk.Button(root, text="Torol", font=('italic', 10), bg='#224193', fg="white",
+                                  activeforeground="#D2601A", activebackground="#1D3C45")
+        get_button = tk.Button(root, text="Leker", font=('italic', 10), bg='#224193', fg="white",
+                               activeforeground="#D2601A", activebackground="#1D3C45")
+        update_button = tk.Button(root, text="Frissit", font=('italic', 10), bg='#224193', fg="white",
+                                  activeforeground="#D2601A", activebackground="#1D3C45")
 
-        filmek_tabla = tk.Button(root, text="Filmek", font=('italic', 10), bg='white', command=filmek_change)
-        film_mufaj_tabla = tk.Button(root, text="Filmek mufajai", font=('italic', 10), bg='white', command=filmek_mufajai_change)
-        forgalmazok_tabla = tk.Button(root, text="Forgalmazok", font=('italic', 10), bg='white', command=forgalmazok_change)
-        gyartok_tabla = tk.Button(root, text="Gyartok", font=('italic', 10), bg='white', command=gyartok_change)
-        gyartasok_tabla = tk.Button(root, text="Gyartasok", font=('italic', 10), bg='white', command=gyartasok_change)
-        rendezok_tabla = tk.Button(root, text="Rendezok", font=('italic', 10), bg='white', command=rendezok_change)
-        rendezesek_tabla = tk.Button(root, text="Rendezesek", font=('italic', 10), bg='white', command=rendezesek_change)
-        szineszek_tabla = tk.Button(root, text="Szineszek", font=('italic', 10), bg='white', command=szineszek_change)
-        szereplesek_tabla = tk.Button(root, text="Szereplesek", font=('italic', 10), bg='white', command=szereplesek_change)
-        felhasznalok_tabla = tk.Button(root, text="Felhasznalok", font=('italic', 10), bg='white', command=felhasznalok_change)
-        ertekelesek_tabla = tk.Button(root, text="Ertekelesek", font=('italic', 10), bg='white', command=ertekelesek_change)
+        filmek_tabla = tk.Button(root, text="Filmek", font=('italic', 10), bg='#224193', fg="white",
+                                 activeforeground="#D2601A", activebackground="#1D3C45", command=filmek_change)
+        film_mufaj_tabla = tk.Button(root, text="Filmek mufajai", font=('italic', 10), bg='#224193', fg="white",
+                                     activeforeground="#D2601A", activebackground="#1D3C45", command=filmek_mufajai_change)
+        forgalmazok_tabla = tk.Button(root, text="Forgalmazok", font=('italic', 10), bg='#224193', fg="white",
+                                      activeforeground="#D2601A", activebackground="#1D3C45", command=forgalmazok_change)
+        gyartok_tabla = tk.Button(root, text="Gyartok", font=('italic', 10), bg='#224193', fg="white",
+                                  activeforeground="#D2601A", activebackground="#1D3C45", command=gyartok_change)
+        gyartasok_tabla = tk.Button(root, text="Gyartasok", font=('italic', 10), bg='#224193', fg="white",
+                                    activeforeground="#D2601A", activebackground="#1D3C45", command=gyartasok_change)
+        rendezok_tabla = tk.Button(root, text="Rendezok", font=('italic', 10), bg='#224193', fg="white",
+                                   activeforeground="#D2601A", activebackground="#1D3C45", command=rendezok_change)
+        rendezesek_tabla = tk.Button(root, text="Rendezesek", font=('italic', 10), bg='#224193', fg="white",
+                                     activeforeground="#D2601A", activebackground="#1D3C45", command=rendezesek_change)
+        szineszek_tabla = tk.Button(root, text="Szineszek", font=('italic', 10), bg='#224193', fg="white",
+                                    activeforeground="#D2601A", activebackground="#1D3C45", command=szineszek_change)
+        szereplesek_tabla = tk.Button(root, text="Szereplesek", font=('italic', 10), bg='#224193', fg="white",
+                                      activeforeground="#D2601A", activebackground="#1D3C45", command=szereplesek_change)
+        felhasznalok_tabla = tk.Button(root, text="Felhasznalok", font=('italic', 10), bg='#224193', fg="white",
+                                       activeforeground="#D2601A", activebackground="#1D3C45", command=felhasznalok_change)
+        ertekelesek_tabla = tk.Button(root, text="Ertekelesek", font=('italic', 10), bg='#224193', fg="white",
+                                      activeforeground="#D2601A", activebackground="#1D3C45", command=ertekelesek_change)
 
-        elso_leker = tk.Button(root, text="Elso lekerdezes", font=('italic', 10), bg='white', command=leker1)
-        masodik_leker = tk.Button(root, text="Masodik lekerdezes", font=('italic', 10), bg='white', command=leker2)
-        harmadik_leker = tk.Button(root, text="Harmadik lekerdezes", font=('italic', 10), bg='white', command=leker3)
+        elso_leker = tk.Button(root, text="Elso lekerdezes", font=('italic', 10), bg='#224193', fg="white",
+                               activeforeground="#D2601A", activebackground="#1D3C45", command=leker1)
+        masodik_leker = tk.Button(root, text="Masodik lekerdezes", font=('italic', 10), bg='#224193', fg="white",
+                                  activeforeground="#D2601A", activebackground="#1D3C45", command=leker2)
+        harmadik_leker = tk.Button(root, text="Harmadik lekerdezes", font=('italic', 10), bg='#224193', fg="white",
+                                   activeforeground="#D2601A", activebackground="#1D3C45", command=leker3)
 
         insert_button.place(x=20, y=220)
         delete_button.place(x=90, y=220)
@@ -1627,6 +1658,7 @@ if __name__ == '__main__':
 
         # listboxok, scrollbarok:
         lista = tk.Listbox(root)
+        lista.configure(bg="#6F9BD1")
         scrollbar = tk.Scrollbar(lista)
         scrollbar1 = tk.Scrollbar(lista, orient="horizontal")
         scrollbar.pack(side="right", fill="both")
