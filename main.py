@@ -1542,6 +1542,7 @@ if __name__ == '__main__':
         root = tk.Tk()
         root.geometry("1200x800")
         root.configure(bg="#28334A")
+        root.state("zoomed")
         root.title("Kotelezo program, imdb")
 
         # Label-ök
