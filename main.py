@@ -1541,7 +1541,7 @@ if __name__ == '__main__':
         # Ablak
         root = tk.Tk()
         root.geometry("1200x800")
-        root.configure(bg="#DF3C5F")
+        root.configure(bg="#28334A")
         root.title("Kotelezo program, imdb")
 
         # Label-ök
@@ -1552,87 +1552,87 @@ if __name__ == '__main__':
         var5 = tk.StringVar()
         var6 = tk.StringVar()
 
-        label1 = tk.Label(root, textvariable=var1, font=('bold', 10), bg="#6F9BD1")
+        label1 = tk.Label(root, textvariable=var1, font=('bold', 10), bg="#CBCBD4")
         label1.place(x=20, y=30)
 
-        label2 = tk.Label(root, textvariable=var2, font=('bold', 10), bg="#6F9BD1")
+        label2 = tk.Label(root, textvariable=var2, font=('bold', 10), bg="#CBCBD4")
         label2.place(x=20, y=60)
 
-        label3 = tk.Label(root, textvariable=var3, font=('bold', 10), bg="#6F9BD1")
+        label3 = tk.Label(root, textvariable=var3, font=('bold', 10), bg="#CBCBD4")
         label3.place(x=20, y=90)
 
-        label4 = tk.Label(root, textvariable=var4, font=('bold', 10), bg="#6F9BD1")
+        label4 = tk.Label(root, textvariable=var4, font=('bold', 10), bg="#CBCBD4")
         label4.place(x=20, y=120)
 
-        label5 = tk.Label(root, textvariable=var5, font=('bold', 10), bg="#6F9BD1")
+        label5 = tk.Label(root, textvariable=var5, font=('bold', 10), bg="#CBCBD4")
         label5.place(x=20, y=150)
 
-        label6 = tk.Label(root, textvariable=var6, font=('bold', 10), bg="#6F9BD1")
+        label6 = tk.Label(root, textvariable=var6, font=('bold', 10), bg="#CBCBD4")
         label6.place(x=20, y=180)
 
         # input mezők:
         input_1 = tk.Entry()
         input_1.place(x=170, y=30)
-        input_1.configure(bg="#6F9BD1")
+        input_1.configure(bg="#CBCBD4")
 
         input_2 = tk.Entry()
         input_2.place(x=170, y=60)
-        input_2.configure(bg="#6F9BD1")
+        input_2.configure(bg="#CBCBD4")
 
         input_3 = tk.Entry()
         input_3.place(x=170, y=90)
-        input_3.configure(bg="#6F9BD1")
+        input_3.configure(bg="#CBCBD4")
 
         input_4 = tk.Entry()
         input_4.place(x=170, y=120)
-        input_4.configure(bg="#6F9BD1")
+        input_4.configure(bg="#CBCBD4")
 
         input_5 = tk.Entry()
         input_5.place(x=170, y=150)
-        input_5.configure(bg="#6F9BD1")
+        input_5.configure(bg="#CBCBD4")
 
         input_6 = tk.Entry()
         input_6.place(x=170, y=180)
-        input_6.configure(bg="#6F9BD1")
+        input_6.configure(bg="#CBCBD4")
 
         # gombok:
-        insert_button = tk.Button(root, text="Beszur", font=('italic', 10), bg='#224193', fg="white",
+        insert_button = tk.Button(root, text="Beszur", font=('italic', 10), bg='#D4AF37', fg="black",
                                   activeforeground="#D2601A", activebackground="#1D3C45")
-        delete_button = tk.Button(root, text="Torol", font=('italic', 10), bg='#224193', fg="white",
+        delete_button = tk.Button(root, text="Torol", font=('italic', 10), bg='#D4AF37', fg="black",
                                   activeforeground="#D2601A", activebackground="#1D3C45")
-        get_button = tk.Button(root, text="Leker", font=('italic', 10), bg='#224193', fg="white",
+        get_button = tk.Button(root, text="Leker", font=('italic', 10), bg='#D4AF37', fg="black",
                                activeforeground="#D2601A", activebackground="#1D3C45")
-        update_button = tk.Button(root, text="Frissit", font=('italic', 10), bg='#224193', fg="white",
+        update_button = tk.Button(root, text="Frissit", font=('italic', 10), bg='#D4AF37', fg="black",
                                   activeforeground="#D2601A", activebackground="#1D3C45")
 
-        filmek_tabla = tk.Button(root, text="Filmek", font=('italic', 10), bg='#224193', fg="white",
+        filmek_tabla = tk.Button(root, text="Filmek", font=('italic', 10), bg='#D4AF37', fg="black",
                                  activeforeground="#D2601A", activebackground="#1D3C45", command=filmek_change)
-        film_mufaj_tabla = tk.Button(root, text="Filmek mufajai", font=('italic', 10), bg='#224193', fg="white",
+        film_mufaj_tabla = tk.Button(root, text="Filmek mufajai", font=('italic', 10), bg='#D4AF37', fg="black",
                                      activeforeground="#D2601A", activebackground="#1D3C45", command=filmek_mufajai_change)
-        forgalmazok_tabla = tk.Button(root, text="Forgalmazok", font=('italic', 10), bg='#224193', fg="white",
+        forgalmazok_tabla = tk.Button(root, text="Forgalmazok", font=('italic', 10), bg='#D4AF37', fg="black",
                                       activeforeground="#D2601A", activebackground="#1D3C45", command=forgalmazok_change)
-        gyartok_tabla = tk.Button(root, text="Gyartok", font=('italic', 10), bg='#224193', fg="white",
+        gyartok_tabla = tk.Button(root, text="Gyartok", font=('italic', 10), bg='#D4AF37', fg="black",
                                   activeforeground="#D2601A", activebackground="#1D3C45", command=gyartok_change)
-        gyartasok_tabla = tk.Button(root, text="Gyartasok", font=('italic', 10), bg='#224193', fg="white",
+        gyartasok_tabla = tk.Button(root, text="Gyartasok", font=('italic', 10), bg='#D4AF37', fg="black",
                                     activeforeground="#D2601A", activebackground="#1D3C45", command=gyartasok_change)
-        rendezok_tabla = tk.Button(root, text="Rendezok", font=('italic', 10), bg='#224193', fg="white",
+        rendezok_tabla = tk.Button(root, text="Rendezok", font=('italic', 10), bg='#D4AF37', fg="black",
                                    activeforeground="#D2601A", activebackground="#1D3C45", command=rendezok_change)
-        rendezesek_tabla = tk.Button(root, text="Rendezesek", font=('italic', 10), bg='#224193', fg="white",
+        rendezesek_tabla = tk.Button(root, text="Rendezesek", font=('italic', 10), bg='#D4AF37', fg="black",
                                      activeforeground="#D2601A", activebackground="#1D3C45", command=rendezesek_change)
-        szineszek_tabla = tk.Button(root, text="Szineszek", font=('italic', 10), bg='#224193', fg="white",
+        szineszek_tabla = tk.Button(root, text="Szineszek", font=('italic', 10), bg='#D4AF37', fg="black",
                                     activeforeground="#D2601A", activebackground="#1D3C45", command=szineszek_change)
-        szereplesek_tabla = tk.Button(root, text="Szereplesek", font=('italic', 10), bg='#224193', fg="white",
+        szereplesek_tabla = tk.Button(root, text="Szereplesek", font=('italic', 10), bg='#D4AF37', fg="black",
                                       activeforeground="#D2601A", activebackground="#1D3C45", command=szereplesek_change)
-        felhasznalok_tabla = tk.Button(root, text="Felhasznalok", font=('italic', 10), bg='#224193', fg="white",
+        felhasznalok_tabla = tk.Button(root, text="Felhasznalok", font=('italic', 10), bg='#D4AF37', fg="black",
                                        activeforeground="#D2601A", activebackground="#1D3C45", command=felhasznalok_change)
-        ertekelesek_tabla = tk.Button(root, text="Ertekelesek", font=('italic', 10), bg='#224193', fg="white",
+        ertekelesek_tabla = tk.Button(root, text="Ertekelesek", font=('italic', 10), bg='#D4AF37', fg="black",
                                       activeforeground="#D2601A", activebackground="#1D3C45", command=ertekelesek_change)
 
-        elso_leker = tk.Button(root, text="Elso lekerdezes", font=('italic', 10), bg='#224193', fg="white",
+        elso_leker = tk.Button(root, text="Elso lekerdezes", font=('italic', 10), bg='#D4AF37', fg="black",
                                activeforeground="#D2601A", activebackground="#1D3C45", command=leker1)
-        masodik_leker = tk.Button(root, text="Masodik lekerdezes", font=('italic', 10), bg='#224193', fg="white",
+        masodik_leker = tk.Button(root, text="Masodik lekerdezes", font=('italic', 10), bg='#D4AF37', fg="black",
                                   activeforeground="#D2601A", activebackground="#1D3C45", command=leker2)
-        harmadik_leker = tk.Button(root, text="Harmadik lekerdezes", font=('italic', 10), bg='#224193', fg="white",
+        harmadik_leker = tk.Button(root, text="Harmadik lekerdezes", font=('italic', 10), bg='#D4AF37', fg="black",
                                    activeforeground="#D2601A", activebackground="#1D3C45", command=leker3)
 
         insert_button.place(x=20, y=220)
@@ -1658,7 +1658,7 @@ if __name__ == '__main__':
 
         # listboxok, scrollbarok:
         lista = tk.Listbox(root)
-        lista.configure(bg="#6F9BD1")
+        lista.configure(bg="#CBCBD4")
         scrollbar = tk.Scrollbar(lista)
         scrollbar1 = tk.Scrollbar(lista, orient="horizontal")
         scrollbar.pack(side="right", fill="both")
